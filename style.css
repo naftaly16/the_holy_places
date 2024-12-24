@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --background-primary-color: #e9dfc7;
+    --butons-color: #35658a;
+    --primary-color: #8B4513;
+    --secondary-color: #FFFFFF;
+    --font-family: 'Bona Nova', serif;
+}
