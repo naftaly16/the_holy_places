@@ -162,7 +162,7 @@ body {
           "header"
           "content";
       grid-template-columns: 1fr;
-      position: relative;  /* Added for proper positioning context */
+      position: relative;
   }
   
   .header {
@@ -171,17 +171,16 @@ body {
       align-items: center;
       padding: 10px 20px;
       position: relative;
-      z-index: 1001;  /* Ensure header stays above sidebar */
+      z-index: 1001; 
   }
   
-  /* Hamburger Menu Icon */
   .menu-toggle {
       display: block;
       width: 40px;
       height: 30px;
       position: relative;
       cursor: pointer;
-      z-index: 1002;  /* Ensure toggle stays above all */
+      z-index: 1002;
       margin-left: 10px;
   }
   
@@ -192,50 +191,47 @@ body {
       position: absolute;
       top: 50%; 
       left: 50%; 
-      transform: translate(-50%, -50%); 
+      transform: translateX(-100%); 
   }
   
-  /* Hide original nav by default */
   .sidebar-menu {
       position: fixed;
       top: 0;
-      right: -100%;  /* Changed from -70% to ensure it's fully hidden */
+      right: -100%; 
       width: 70%;
       height: 100vh;
       background-color: var(--background-primary-color);
       transition: right 0.3s ease-in-out;
+      visibility: hidden;
+      opacity: 0;
       z-index: 1000;
       padding-top: 60px;
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-      display: flex;  /* Ensure flex layout is maintained */
+      display: flex;  
       flex-direction: column;
-      overflow-y: auto;  /* Allow scrolling if content is too long */
   }
   
-  /* Checkbox for menu toggle */
   #menu-toggle-checkbox {
-      display: none;
+      visibility: hidden;
   }
   
-  /* Show nav when checkbox is checked */
   #menu-toggle-checkbox:checked ~ .sidebar-menu {
       right: 0;
-      visibility: visible;  /* Ensure visibility */
-      opacity: 1;  /* Ensure opacity */
+      visibility: visible;  
+      opacity: 1; 
+    
   }
   
-  /* Style for the menu buttons */
   .sidebar-menu button {
       border-radius: 20px;
       text-align: center;
       margin: 5px 15px;
-      opacity: 1;  /* Ensure buttons are visible */
-      visibility: visible;  /* Ensure visibility */
-      display: block;  /* Ensure proper display */
-      width: calc(100% - 30px);  /* Account for margins */
+      opacity: 1;  
+      visibility: visible;  
+      display: block; 
+      width: calc(100% - 30px); 
   }
   
-  /* Add overlay when menu is open */
   #menu-toggle-checkbox:checked ~ .overlay {
       position: fixed;
       top: 0;
@@ -246,7 +242,6 @@ body {
       z-index: 999;
   }
   
-  /* Content adjustments for mobile */
   .content {
       grid-template-areas:
           "text"
@@ -256,7 +251,7 @@ body {
       grid-template-rows: auto;
       padding: 10px;
       gap: 30px;
-      position: relative;  /* Added for proper positioning */
+      position: relative;  
   }
   
   .text-box {
