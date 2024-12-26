@@ -171,7 +171,6 @@ body {
       align-items: center;
       padding: 10px 20px;
       position: relative;
-      z-index: 1001; 
   }
   
   .menu-toggle {
@@ -195,20 +194,16 @@ body {
   }
   
   .sidebar-menu {
-      position: fixed;
-      top: 0;
-      right: -100%; 
-      width: 70%;
-      height: 100vh;
-      background-color: var(--background-primary-color);
-      transition: right 0.3s ease-in-out;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 1000;
-      padding-top: 60px;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-      display: flex;  
-      flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--background-primary-color);
+    visibility: hidden;
+    transform: translateX(400px);
+    z-index: 1000;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   }
   
   #menu-toggle-checkbox {
@@ -216,10 +211,11 @@ body {
   }
   
   #menu-toggle-checkbox:checked ~ .sidebar-menu {
-      right: 0;
-      visibility: visible;  
-      opacity: 1; 
-    
+    animation: menu-slide-left 2s both;
+  }
+
+  #menu-toggle-checkbox:not(:checked) ~ .sidebar-menu {
+    animation: menu-slide-right 2s forwards;
   }
   
   .sidebar-menu button {
@@ -227,19 +223,18 @@ body {
       text-align: center;
       margin: 5px 15px;
       opacity: 1;  
-      visibility: visible;  
       display: block; 
       width: calc(100% - 30px); 
   }
   
   #menu-toggle-checkbox:checked ~ .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
   
   .content {
@@ -265,5 +260,20 @@ body {
   .image-box img,
   .iframe-box iframe {
       width: 90%;
+  }
+}
+@keyframes menu-slide-left {
+
+  100% {
+    transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+@keyframes menu-slide-right {
+
+  100% {
+    transform: translateX(400px);
+    visibility: hidden;
   }
 }
