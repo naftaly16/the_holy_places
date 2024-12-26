@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+
+    <title>מקומות קדושים</title>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">ראשי</a>
+        <a href="#">שליחת שם לתפילה</a>
+        <a href="about.html">אודות</a>
+    </header>
+    <div class="form-container">
+        <h2>שליחת שם לתפילה</h2>
+        <form action="#" method="post" class="prayer-form">
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mother-name">שם האם:</label>
+            <input type="text" id="mother-name" name="mother-name" required>
+
+            <label for="prayer-location">מקום לתפילה:</label>
+            <select id="prayer-location" name="prayer-location" required>
+                <option value="">בחר מקום</option>
+                <option value="הכותל">הכותל המערבי</option>
+                <option value="מערת המכפלה">מערת המכפלה</option>
+                <option value="קבר רחל">קבר רחל</option>
+                <option value="קבר הרשבי">קבר הרשב"י</option>
+                <option value="בית הקברות בצפת">בית הקברות בצפת</option>
+            </select>
+
+            <button type="submit">שלח</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
