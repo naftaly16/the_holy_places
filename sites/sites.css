@@ -20,14 +20,21 @@ body {
     gap: 10px;
 }
 
-.header {
+header {
     grid-area: header;
     text-align: center;
     font-size: 2rem;
     color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
 }
-.header h1 {
+header a {
+  flex: 1fr 1fr 1fr;
+}
+h1 {
   margin: 10px;
+  align-self: last baseline;
+  text-align: center;
 }
 
 .sidebar-menu {
@@ -165,7 +172,7 @@ body {
       position: relative;
   }
   
-  .header {
+  header {
       display: flex;
       justify-content: space-between;
       align-items: center;
