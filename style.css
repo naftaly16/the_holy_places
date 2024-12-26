@@ -73,6 +73,7 @@ header {
 header a {
     font-family: var(--primary-color);
     font-weight: bold;
+    text-align: center;
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.5rem;
@@ -191,6 +192,7 @@ header a {
 
     header {
         justify-content: center;
+        margin: 2vh 10% 0 10%;
     }
 
     h1 {
