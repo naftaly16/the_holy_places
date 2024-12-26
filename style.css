@@ -29,6 +29,10 @@ h2,
     font-size: 3rem;
 }
 
+h3{
+    font-size: 1.5rem;
+}
+
 .homepage {
     font-family: var(--font-family);
     background-color: var(--background-primary-color);
@@ -64,10 +68,6 @@ header {
     align-items: center;
     padding: 10px;
     margin: 2vh 25% 0 25%;
-    /* border-radius: 15%; */
-    /* border: solid var(--butons-color); */
-    /* margin: 2vh auto auto auto; */
-    /* background-color: var(--background-primary-color); */
 }
 
 header a {
@@ -125,7 +125,7 @@ header a {
         "item1 item2 item3"
         "item4 item5 item6";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
     padding: 10px;
 }

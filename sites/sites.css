@@ -27,14 +27,15 @@ header {
     color: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 header a {
   flex: 1fr 1fr 1fr;
 }
 h1 {
-  margin: 10px;
-  align-self: last baseline;
-  text-align: center;
+ display: flex;
+ justify-content: center;
+ width: 100%;
 }
 
 .sidebar-menu {
@@ -141,6 +142,10 @@ h1 {
     height: 100%;
     border : 2px solid var(--primary-color);
   }
+
+  #menu-toggle-checkbox {
+    visibility: hidden;
+}
 
 @media screen and (max-width: 1024px) {
   .container {
