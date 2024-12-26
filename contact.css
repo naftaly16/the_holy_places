@@ -1,0 +1,49 @@
+@import url(style.css);
+
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.prayer-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.prayer-form input,
+.prayer-form select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.prayer-form button {
+    background-color: var(--butons-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prayer-form button:hover {
+    background-color: darken(var(--butons-color), 10%);
+}
