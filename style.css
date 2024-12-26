@@ -125,7 +125,7 @@ header a {
         "item1 item2 item3"
         "item4 item5 item6";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
     padding: 10px;
 }
@@ -206,9 +206,6 @@ header a {
     }
 
     .title .quote {
-        /* animation: none; */
-        /* white-space: normal; */
-        /* overflow: visible; */
         border-left: none;
         max-width: 100%;
     }
